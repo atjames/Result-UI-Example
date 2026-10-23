@@ -1,0 +1,12 @@
+{
+  "name": "junction-labcorp-result-ui-example",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "demo": "node src/server.js --demo"
+  }
+}

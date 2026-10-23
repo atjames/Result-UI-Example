@@ -1,0 +1,190 @@
+{
+  "order_id": "11111111-1111-4111-8111-111111111111",
+  "user_id": "22222222-2222-4222-8222-222222222222",
+  "report": {
+    "source_lab": "Labcorp",
+    "report_status": { "code": "F", "display": "Final" },
+    "lab_account_number": "DEMO-ACCOUNT",
+    "patient": {
+      "lab_patient_id": "DEMO-PATIENT",
+      "alternate_patient_ids": ["DEMO-ALT"],
+      "name": { "family": "Sample", "given": "Casey" },
+      "birth_date": { "source_value": "19840615", "local_value": "1984-06-15", "precision": "date" },
+      "sex": "Female",
+      "notes": ["Synthetic patient details for this example."]
+    },
+    "ordering_provider": {
+      "name": { "family": "Example", "given": "Jordan", "degree": "MD" },
+      "npi": "0000000000"
+    },
+    "notes": [
+      "This is synthetic demonstration data.\nThe source report may contain multiline comments or disclaimers."
+    ],
+    "specimens": [
+      {
+        "specimen_id": "DEMO-BLOOD-1",
+        "control_number": "DEMO-CTRL-1",
+        "alternate_control_number": "DEMO-ALT-CTRL-1",
+        "lab_account_number": "DEMO-ACCOUNT",
+        "source": "Blood",
+        "collection_time": { "source_value": "202610071300", "local_value": "2026-10-07T13:00", "precision": "minute" },
+        "lab_release_time": { "source_value": "202610071740", "local_value": "2026-10-07T17:40", "precision": "minute" },
+        "report_status": { "code": "F", "display": "Final" },
+        "patient": {
+          "lab_patient_id": "DEMO-PATIENT",
+          "alternate_patient_ids": ["DEMO-ALT"],
+          "name": { "family": "Sample", "given": "Casey" },
+          "birth_date": { "source_value": "19840615", "local_value": "1984-06-15", "precision": "date" },
+          "sex": "Female",
+          "notes": []
+        },
+        "clinical_information": {
+          "fasting": true,
+          "total_volume": "8 mL",
+          "information": "Routine screening",
+          "notes": []
+        },
+        "notes": ["Specimen received in acceptable condition."],
+        "ordered_tests": [
+          {
+            "code": "005009",
+            "name": "CBC With Differential/Platelet",
+            "status": { "code": "F", "display": "Final" },
+            "clinical_information": { "notes": [] },
+            "observations": [
+              {
+                "id": "blood-hemoglobin",
+                "code": "005041",
+                "name": "Hemoglobin",
+                "result": "6.5",
+                "units": "g/dL",
+                "reference_interval": "11.1-15.9",
+                "abnormal_flags": [{ "code": "LL", "display": "Critical low" }],
+                "interpretation": "critical",
+                "status": { "code": "F", "display": "Final" },
+                "performing_lab": "01",
+                "notes": ["Critical result reported in the source result."]
+              },
+              {
+                "id": "blood-hematocrit",
+                "code": "005058",
+                "name": "Hematocrit",
+                "result": "19.5",
+                "units": "%",
+                "reference_interval": "34.0-46.6",
+                "abnormal_flags": [{ "code": "L", "display": "Low" }],
+                "interpretation": "abnormal",
+                "status": { "code": "F", "display": "Final" },
+                "performing_lab": "01"
+              }
+            ],
+            "notes": []
+          },
+          {
+            "code": "322000",
+            "name": "Comp. Metabolic Panel (14)",
+            "status": { "code": "F", "display": "Final" },
+            "clinical_information": { "fasting": true, "notes": [] },
+            "observations": [
+              {
+                "id": "blood-glucose",
+                "code": "001032",
+                "name": "Glucose",
+                "result": "99",
+                "units": "mg/dL",
+                "reference_interval": "70-99",
+                "abnormal_flags": [],
+                "interpretation": "normal",
+                "status": { "code": "F", "display": "Final" },
+                "performing_lab": "03"
+              },
+              {
+                "id": "blood-sodium",
+                "code": "001065",
+                "name": "Sodium",
+                "result": "132",
+                "units": "mmol/L",
+                "reference_interval": "134-144",
+                "abnormal_flags": [{ "code": "L", "display": "Low" }],
+                "interpretation": "abnormal",
+                "status": { "code": "C", "display": "Corrected" },
+                "performing_lab": "03",
+                "notes": ["Corrected result. Display the current value and the correction status."]
+              }
+            ]
+          },
+          {
+            "code": "DEMO-QNS",
+            "name": "Additional Test",
+            "status": { "code": "X", "display": "Not Performed" },
+            "clinical_information": { "notes": [] },
+            "observations": [],
+            "notes": ["Quantity not sufficient. No result was reported."]
+          }
+        ]
+      },
+      {
+        "specimen_id": "DEMO-STOOL-2",
+        "control_number": "DEMO-CTRL-2",
+        "source": "Stool",
+        "collection_time": { "source_value": "202610071330", "local_value": "2026-10-07T13:30", "precision": "minute" },
+        "lab_release_time": { "source_value": "202610081100", "local_value": "2026-10-08T11:00", "precision": "minute" },
+        "report_status": { "code": "F", "display": "Final" },
+        "patient": {
+          "lab_patient_id": "DEMO-PATIENT",
+          "name": { "family": "Sample", "given": "Casey" },
+          "birth_date": { "source_value": "19840615", "local_value": "1984-06-15", "precision": "date" },
+          "sex": "Female"
+        },
+        "clinical_information": { "information": "Culture requested", "notes": [] },
+        "ordered_tests": [
+          {
+            "code": "DEMO-CULTURE",
+            "name": "Stool Culture",
+            "status": { "code": "F", "display": "Final" },
+            "clinical_information": { "notes": [] },
+            "organism": "Salmonella species",
+            "specimen_details": [{ "specimen_id": "DEMO-STOOL-2", "source": "Stool", "notes": [] }],
+            "observations": [
+              {
+                "id": "culture-organism",
+                "name": "Salmonella species",
+                "result": "Heavy growth",
+                "abnormal_flags": [{ "code": "A", "display": "Abnormal" }],
+                "interpretation": "abnormal",
+                "status": { "code": "F", "display": "Final" },
+                "performing_lab": "01",
+                "notes": ["Organism identification is shown with the culture result."]
+              },
+              {
+                "id": "culture-antibiotic",
+                "name": "Ceftriaxone",
+                "result": "Susceptible",
+                "abnormal_flags": [],
+                "status": { "code": "F", "display": "Final" },
+                "performing_lab": "01",
+                "relationships": [{ "type": "susceptibility", "target_observation_id": "culture-organism" }]
+              }
+            ],
+            "notes": ["S = Susceptible\nI = Intermediate\nR = Resistant"]
+          }
+        ]
+      }
+    ],
+    "performing_laboratories": {
+      "01": {
+        "name": "Example Lab One",
+        "address": { "lines": ["100 Example Street"], "city": "Example City", "state": "NC", "postal_code": "00000" },
+        "phone": "000-000-0000",
+        "medical_director": { "family": "Director", "given": "Avery", "degree": "MD" },
+        "clia": "00D0000000"
+      },
+      "03": {
+        "name": "Example Lab Three",
+        "address": { "lines": ["300 Example Avenue"], "city": "Example Town", "state": "CA", "postal_code": "00000" },
+        "phone": "000-000-0000",
+        "medical_director": { "family": "Director", "given": "Morgan", "degree": "MD" }
+      }
+    }
+  }
+}
